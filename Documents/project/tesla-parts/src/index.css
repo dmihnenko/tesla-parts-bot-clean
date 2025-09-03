@@ -1,0 +1,328 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Apple-inspired base styles */
+:root {
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+  --apple-gray-1: #1d1d1f;
+  --apple-gray-2: #424245;
+  --apple-gray-3: #86868b;
+  --apple-gray-4: #d2d2d7;
+  --apple-gray-5: #f5f5f7;
+  --apple-gray-6: #fbfbfd;
+  --apple-red: #ff3b30;
+  --apple-green: #34c759;
+  --apple-orange: #ff9500;
+  --apple-purple: #af52de;
+  --apple-teal: #5ac8fa;
+  --apple-yellow: #ffcc00;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--apple-gray-1);
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -.022em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.08349;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 32px;
+  line-height: 1.125;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 17px;
+  line-height: 1.23529;
+  font-weight: 600;
+}
+
+/* Apple-inspired component styles */
+.btn {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  min-height: 44px;
+}
+
+.btn-primary {
+  background-color: var(--apple-blue);
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 17px;
+  font-weight: 400;
+  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--apple-blue-hover);
+  box-shadow: 0 4px 16px rgba(0, 113, 227, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  background-color: #0051a8;
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: var(--apple-gray-6);
+  color: var(--apple-gray-1);
+  padding: 12px 24px;
+  font-size: 17px;
+  font-weight: 400;
+  border: 1px solid var(--apple-gray-4);
+}
+
+.btn-secondary:hover {
+  background-color: var(--apple-gray-5);
+  border-color: var(--apple-gray-3);
+}
+
+.btn-secondary:active {
+  background-color: var(--apple-gray-4);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 15px;
+  min-height: 36px;
+}
+
+/* Header responsive styles */
+@media (max-width: 768px) {
+  header > div {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    text-align: center;
+  }
+  header > div > nav {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  header > div {
+    padding: 0.75rem 1rem !important;
+  }
+  header > div > a {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* Home page responsive styles */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1.5rem 1rem !important;
+  }
+  .home-container h1 {
+    font-size: 1.75rem !important;
+    margin-bottom: 2rem !important;
+  }
+  .filters-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .table-responsive {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 1rem 0.5rem !important;
+  }
+  .home-container h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Mobile optimizations with improved breakpoints */
+@media (max-width: 1024px) {
+  /* Tablet and smaller */
+  .home-container {
+    padding: 60px 16px 80px !important;
+  }
+
+  .home-container h1 {
+    font-size: 40px !important;
+    margin-bottom: 48px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile landscape and smaller */
+  /* Improve touch targets */
+  button, .btn, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better text readability */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Optimize images for mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .home-container {
+    padding: 40px 16px 60px !important;
+  }
+
+  .home-container h1 {
+    font-size: 32px !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* Header adjustments */
+  header > div {
+    padding: 12px 16px !important;
+  }
+
+  header > div > a {
+    font-size: 18px !important;
+  }
+
+  /* Product cards in grid */
+  .row.g-3 > div {
+    padding: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile portrait */
+  body {
+    font-size: 15px;
+  }
+
+  .home-container {
+    padding: 32px 12px 48px !important;
+  }
+
+  .home-container h1 {
+    font-size: 28px !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Stack elements vertically on very small screens */
+  .flex {
+    flex-direction: column;
+  }
+
+  /* Smaller buttons */
+  .btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    min-height: 40px;
+  }
+
+  .btn-sm {
+    padding: 8px 16px;
+    font-size: 14px;
+    min-height: 36px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Very small screens */
+  body {
+    font-size: 14px;
+  }
+
+  .home-container {
+    padding: 24px 8px 32px !important;
+  }
+
+  .home-container h1 {
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Minimal padding for very small screens */
+  header > div {
+    padding: 8px 12px !important;
+  }
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .btn-primary, .btn-secondary {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary, .btn-secondary {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}

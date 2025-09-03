@@ -1,0 +1,273 @@
+/* Header Styles */
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e7;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.headerStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #86868b;
+  font-weight: 500;
+}
+
+.headerStatusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #34c759;
+  transition: background-color 0.3s ease;
+}
+
+.headerStatusDot.offline {
+  background-color: #ff3b30;
+}
+
+.headerRate {
+  font-size: 14px;
+  color: #424245;
+  font-weight: 500;
+  letter-spacing: -0.016em;
+}
+
+.headerBackup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.headerBackupIcon {
+  font-size: 14px;
+}
+
+.headerBackupText {
+  font-size: 12px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.headerBackupBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  color: #64748b;
+}
+
+.headerBackupBtn:hover {
+  background-color: #e2e8f0;
+  color: #334155;
+  transform: scale(1.1);
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.headerLink {
+  color: #424245;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.022em;
+  transition: color 0.3s ease, transform 0.2s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.headerLink:hover {
+  color: #0071e3;
+  background-color: rgba(0, 113, 227, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn {
+  padding: 8px 16px;
+  background-color: #ff3b30;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 59, 48, 0.2);
+}
+
+.btn:hover {
+  background-color: #d63027;
+  box-shadow: 0 4px 16px rgba(255, 59, 48, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.headerLoginBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #0071e3 0%, #40a9ff 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.016em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.headerLoginBtn:hover {
+  background: linear-gradient(135deg, #0056cc 0%, #1e90ff 100%);
+  box-shadow: 0 4px 16px rgba(0, 113, 227, 0.3);
+  transform: translateY(-1px);
+}
+
+.headerLoginBtn:active {
+  transform: translateY(0);
+}
+
+.headerLoginBtn span {
+  position: relative;
+  z-index: 1;
+}
+
+.headerLoginBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+  z-index: 0;
+}
+
+.headerLoginBtn:hover::before {
+  left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .headerContainer {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .headerLeft {
+    gap: 12px;
+  }
+
+  .headerRight {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .headerLink {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .btn,
+  .headerLoginBtn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .headerRate {
+    font-size: 13px;
+  }
+
+  .headerBackup {
+    padding: 4px 8px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .headerBackupText {
+    font-size: 11px;
+  }
+
+  .headerBackupBtn {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .headerLeft {
+    gap: 8px;
+  }
+
+  .headerRight {
+    gap: 8px;
+  }
+
+  .headerLink {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  .btn,
+  .headerLoginBtn {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .headerStatus {
+    font-size: 13px;
+  }
+
+  .headerRate {
+    font-size: 12px;
+  }
+}

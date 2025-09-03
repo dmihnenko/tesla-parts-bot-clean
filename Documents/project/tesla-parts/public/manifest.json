@@ -1,0 +1,21 @@
+{
+  "name": "DniproTesla",
+  "short_name": "DniproTesla",
+  "description": "Каталог запчастей для Tesla Model 3 и Model Y",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0070f3",
+  "icons": [
+    {
+      "src": "/icon-192x192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icon-512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
